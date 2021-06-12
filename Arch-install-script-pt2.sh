@@ -1,18 +1,15 @@
-timedatectl set-timezone America/Chicago
-locale-gen
-echo LANG=en_US.UTF-8 > /etc/locale.conf
-export LANG=en_US.UTF-8
-echo archtest > /etc/hostname
-touch /etc/hosts
-echo 127.0.0.1	localhost ::1		localhost 127.0.1.1	archtest > /etc/hosts
-passwd
-arch
-pacman -S grub
-grub-install /dev/sda
-grub-mkconfig -o /boot/grub/grub.cfg
-pacman -S xorg xfce4 xfce4-goodies firefox lightdm NetworkManager
-systemctl start lightdm.service
-systemctl enable lightdm.service
-systemctl enable NetworkManager.service
 exit
-shutdown now
+systemctl enable NetworkManager.service
+systemctl enable lightdm.service
+pacman -S xorg xfce4 xfce4-goodies firefox sddm NetworkManager -y
+grub-mkconfig -o /boot/grub/grub.cfg
+grub-install /dev/sda
+pacman -S grub
+passwd
+echo 127.0.0.1	localhost ::1		localhost 127.0.1.1	archtest > /etc/hosts
+touch /etc/hosts
+echo archtest > /etc/hostname
+export LANG=en_US.UTF-8
+echo LANG=en_US.UTF-8 > /etc/locale.conf
+locale-gen
+timedatectl set-timezone America/Chicago
