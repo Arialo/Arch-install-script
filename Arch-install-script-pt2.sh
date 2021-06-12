@@ -1,4 +1,5 @@
 exit
+useradd example
 systemctl enable NetworkManager.service
 systemctl enable lightdm.service
 pacman -S xorg xfce4 xfce4-goodies firefox sddm NetworkManager -y
