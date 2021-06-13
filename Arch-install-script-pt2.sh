@@ -10,9 +10,9 @@ passwd
 pacman -S grub -y
 grub-install /dev/sda
 grub-mkconfig -o /boot/grub/grub.cfg
-pacman -S xorg xfce4 xfce4-goodies firefox sudo -y
-pacman -S sddm networkmanager -y
-systemctl enable sddm.service
+pacman -S xorg wayland cinnamon firefox sudo -y
+pacman -S lightdm-gtk-greeter networkmanager -y
+systemctl enable lightdm.service
 systemctl enable NetworkManager.service
 useradd example
 echo "Set the password for the base user"
