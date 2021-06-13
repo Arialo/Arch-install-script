@@ -18,4 +18,5 @@ useradd example
 echo "Set the password for the base user"
 passwd example
 mkdir /home/example
+cp .xinitrc /home/example/
 exit
