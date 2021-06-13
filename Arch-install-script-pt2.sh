@@ -9,7 +9,8 @@ passwd
 pacman -S grub -y
 grub-install /dev/sda
 grub-mkconfig -o /boot/grub/grub.cfg
-pacman -S xorg xfce4 xfce4-goodies firefox sddm NetworkManager -y
+pacman -S xorg xfce4 xfce4-goodies firefox -y
+pacman -S sddm NetworkManager -y
 systemctl enable sddm.service
 systemctl enable NetworkManager.service
 useradd example
