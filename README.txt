@@ -20,4 +20,14 @@ This will kick off everything and there may not be much input after this
 
 7. Input the passwords for the root and base user and press enter/y to install some packages
 
-8. Reboot and enjoy!
+8. Reboot and log in as the root user to get everything else set up
+The main user doesn't work for reasons unknown to me so root is pretty much the only option until you get your user set up
+
+9. Run useradd -m "your user" and passwd "your user"
+Replace "your user" with the username you want
+
+10. Run EDITOR=nano visudo and add "your user" ALL=(ALL) ALL under the user privilege specification section
+This will allow you to run commands using sudo as your main user
+
+11. (Debatably optional) Customize to your heart's content
+Just customize as much as you want, desktop environments, login managers, themes and pretty much anything else can be changed to whatever you want
