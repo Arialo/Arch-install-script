@@ -11,12 +11,10 @@ pacman -S grub -y
 grub-install /dev/sda
 grub-mkconfig -o /boot/grub/grub.cfg
 pacman -S xorg wayland cinnamon firefox sudo -y
-pacman -S lightdm-gtk-greeter networkmanager -y
-systemctl enable lightdm.service
+pacman -S gdm networkmanager -y
+systemctl enable gdm.service
 systemctl enable NetworkManager.service
-useradd example
+useradd -m example
 echo "Set the password for the base user"
 passwd example
-mkdir /home/example
-cp .xinitrc /home/example/
 exit
