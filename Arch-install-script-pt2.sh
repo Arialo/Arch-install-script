@@ -10,6 +10,7 @@ passwd
 pacman -S grub -y
 grub-install /dev/sda
 grub-mkconfig -o /boot/grub/grub.cfg
+pacman -S archlinux-keyring
 pacman -S xorg wayland cinnamon firefox sudo -y
 pacman -S gdm networkmanager -y
 systemctl enable gdm.service
