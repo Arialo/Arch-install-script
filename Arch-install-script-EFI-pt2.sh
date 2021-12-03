@@ -12,6 +12,7 @@ mkdir /boot/efi
 mount /dev/sda1 /boot/efi
 grub-install --target=x86_64-efi --bootloader-id=GRUB --efi-directory=/boot/efi
 grub-mkconfig -o /boot/grub/grub.cfg
+pacman -S archlinux-keyring
 pacman -S xorg wayland cinnamon firefox sudo -y
 pacman -S gdm networkmanager -y
 systemctl enable gdm.service
