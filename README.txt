@@ -16,7 +16,7 @@ This will install git and update the pacman repositories
 4. Run git clone https://github.com/Arialo/Arch-install-script.git
 This will clone the scripts into your home directory
 
-5. Copy the scripts out of a folder with cp -r Arch-install-script/* ~
+5. Copy the scripts out of a folder with cp -r ~/Arch-install-script/* ~
 This will put the installation scripts into your home folder
 
 6. Edit the scripts with nano and change the hostname and username from testarch to whatever you want and from example to your username
